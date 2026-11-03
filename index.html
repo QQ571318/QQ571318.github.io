@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <!-- 第二步：链接外部CSS文件 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="resume-box">
+        <h1>个人简历</h1>
+        <section class="part">
+            <h2>基本信息</h2>
+            <ul class="info-list">
+                <li>姓名：梅红</li>
+                <li>性别：女</li>
+                <li>出生日期：1981年1月13日</li>
+                <li>籍贯：湖北省黄梅县</li>
+            </ul>
+
+            <!-- 视频播放器容器 -->
+            <div id="video-container" class="video-wrap">
+                <!-- js会在这里动态生成video标签 -->
+            </div>
+        </section>
+        
+        <section class="part">
+            <h2>教育经历</h2>
+            <table class="edu-table">
+                <tr>
+                    <th>时间</th>
+                    <th>学历/学位</th>
+                    <th>学校/专业</th>
+                </tr>
+                <tr>
+                    <td>1997年-2000年</td>
+                    <td>中专</td>
+                    <td>湖北XX师范学校/计算机应用</td>
+                </tr>
+                <tr>
+                    <td>2025年-2027年</td>
+                    <td>专科</td>
+                    <td>国家开放大学实验学院/网页设计</td>
+                </tr>
+            </table>
+        </section>
+        <section class="part">
+            <h2>工作经历</h2>
+            <ul class="exp-list">
+                <li>2017年-2020年，家庭煮妇，烹饪</li>
+                <li>2020年至今，广告设计，技术专家</li>
+            </ul>
+        </section>
+        <section class="part">
+            <h2>技能</h2>
+            <ul class="skill-list">
+                <li>熟练掌握Java编程语言，熟悉Spring、MyBatis等框架</li>
+                <li>熟悉Linux操作系统，熟练掌握常用命令及Shell脚本编写</li>
+                <li>了解前端技术，如HTML、CSS、JavaScript等，能够配合前端完成页面开发</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- JavaScript：动态创建视频播放器 -->
+    <script>
+        // 获取外层容器
+        const videoContainer = document.getElementById('video-container');
+        // 创建video元素
+        const video = document.createElement('video');
+
+        // 设置视频大小、背景、属性
+        video.style.width = "480px%";
+        video.style.height = "auto";
+        video.style.backgroundColor = "#000000"; //视频容器黑色背景
+        video.controls = true;   //显示播放控制条
+        video.muted = false;     //不禁用声音
+
+        // 设置视频源
+        const source = document.createElement('source');
+        source.src = "myvideo.mp4";
+        source.type = "video/mp4";
+        video.appendChild(source);
+
+        // 将video添加到页面容器
+        videoContainer.appendChild(video);
+
+        // JS控制：页面加载完成后自动暂停（不自动播放）
+        video.addEventListener('loadedmetadata',function(){
+            video.pause();
+        })
+    </script>
+</body>
+</html>

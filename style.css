@@ -1,0 +1,66 @@
+/* 全局样式 通配符选择器 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f3f4f6;
+    font-family: "Microsoft Yahei", sans-serif;
+    line-height: 1.8;
+    padding: 30px;
+}
+/* 简历外容器，整体卡片布局 */
+.resume-box {
+    width: 900px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 40px;
+    /* 阴影、边框，增强视觉效果 */
+    box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+h1 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+.part {
+    margin-bottom: 28px;
+}
+h2 {
+    color: #333;
+    border-left: 4px solid #2b6cb0;
+    padding-left: 10px;
+    margin-bottom:12px;
+}
+ul {
+    list-style-type: none;
+}
+.info-list li, .exp-list li, .skill-list li{
+    font-size: 16px;
+    color: #444;
+}
+/* 表格样式 */
+.edu-table{
+    width:100%;
+    border-collapse: collapse;
+}
+.edu-table th, .edu-table td{
+    border:1px solid #ccc;
+    padding: 10px;
+    text-align:center;
+}
+.edu-table th{
+    background-color:#eee;
+}
+
+/* ==========新增视频播放器容器样式========== */
+.video-wrap{
+    margin-top:16px;
+    padding:12px;
+    background-color:#f7f9fc;
+    border-radius:6px;
+}
